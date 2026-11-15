@@ -1,0 +1,20 @@
+fastapi>=0.115
+uvicorn>=0.30
+sqlalchemy>=2.0
+pydantic>=2.7
+python-multipart>=0.0.9
+pyjwt>=2.8
+pillow>=10.3
+numpy>=1.26
+python-dotenv>=1.0
+reportlab>=4.2
+google-genai>=1.0
+# AI inference (CPU build is enough: pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu)
+torch>=2.2
+torchvision>=0.17
+# tests
+pytest>=8.0
+httpx>=0.27
+# optional, only for CT volume analysis (see models/ct_detector/README.md)
+# monai[all]
+# SimpleITK

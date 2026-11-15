@@ -1,0 +1,73 @@
+{
+ "model": "MONAI lung_nodule_ct_detection v0.6.9 (Apache-2.0)",
+ "data": "LUNA16 subset0 (CC BY 4.0) / LIDC-IDRI (CC BY 3.0)",
+ "cases": [
+  {
+   "case": "case_1",
+   "slices": 147,
+   "marked_nodules": 3,
+   "detections_ge_0.1": 10,
+   "top_score": 1.0
+  },
+  {
+   "case": "case_2",
+   "slices": 477,
+   "marked_nodules": 2,
+   "detections_ge_0.1": 5,
+   "top_score": 0.998
+  },
+  {
+   "case": "case_3",
+   "slices": 229,
+   "marked_nodules": 3,
+   "detections_ge_0.1": 7,
+   "top_score": 1.0
+  },
+  {
+   "case": "case_4",
+   "slices": 121,
+   "marked_nodules": 0,
+   "detections_ge_0.1": 11,
+   "top_score": 0.931
+  }
+ ],
+ "thresholds": {
+  "0.1": {
+   "nodules_found": 5,
+   "marked_nodules": 8,
+   "sensitivity": 0.625,
+   "unmatched_detections_per_scan": 7.0
+  },
+  "0.2": {
+   "nodules_found": 5,
+   "marked_nodules": 8,
+   "sensitivity": 0.625,
+   "unmatched_detections_per_scan": 5.25
+  },
+  "0.3": {
+   "nodules_found": 5,
+   "marked_nodules": 8,
+   "sensitivity": 0.625,
+   "unmatched_detections_per_scan": 4.5
+  },
+  "0.5": {
+   "nodules_found": 5,
+   "marked_nodules": 8,
+   "sensitivity": 0.625,
+   "unmatched_detections_per_scan": 3.75
+  },
+  "0.7": {
+   "nodules_found": 5,
+   "marked_nodules": 8,
+   "sensitivity": 0.625,
+   "unmatched_detections_per_scan": 2.5
+  },
+  "0.9": {
+   "nodules_found": 5,
+   "marked_nodules": 8,
+   "sensitivity": 0.625,
+   "unmatched_detections_per_scan": 1.0
+  }
+ },
+ "note": "Only 4 scans from LUNA16 subset0, which I believe is the released model's validation fold (not verified). Unmatched detections include real small nodules that the LUNA16 reference does not list."
+}

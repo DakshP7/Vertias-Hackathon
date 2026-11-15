@@ -1,0 +1,69 @@
+{
+  "test_accuracy": 0.9959,
+  "test_accuracy_grayscale": 0.9936,
+  "n_test": 1711,
+  "wrong": 7,
+  "cancer_vs_normal": {
+    "threshold": 0.51,
+    "sensitivity": 1.0,
+    "specificity": 1.0,
+    "missed_cancers": 0,
+    "false_alarms": 0,
+    "auc": 1.0,
+    "rule": "midpoint of the cut-offs that best separate normal from cancer on the validation images"
+  },
+  "other_cutoff_rules": {
+    "cut-off for >= 95% validation sensitivity": {
+      "threshold": 0.935,
+      "sensitivity": 0.9564,
+      "specificity": 1.0,
+      "missed_cancers": 50,
+      "false_alarms": 0
+    },
+    "cut-off for >= 99% validation sensitivity": {
+      "threshold": 0.9,
+      "sensitivity": 0.9913,
+      "specificity": 1.0,
+      "missed_cancers": 10,
+      "false_alarms": 0
+    }
+  },
+  "recipe": "v2 grayscale-robust: RandomGrayscale 0.5, flip, rot 10, ColorJitter(0.25, 0.25), label smoothing 0.1, cosine LR, 4 head + 8 fine-tune epochs",
+  "similarity_threshold_for_groups": 0.9,
+  "n_groups": 5530,
+  "leak_rate_random_split": {
+    "0.95": 0.3168,
+    "0.9": 0.671,
+    "0.85": 0.8498,
+    "0.8": 0.934
+  },
+  "leak_rate_group_split": {
+    "0.95": 0.0,
+    "0.9": 0.0,
+    "0.85": 0.4974,
+    "0.8": 0.8264
+  },
+  "confusion_matrix": [
+    [
+      550,
+      0,
+      6
+    ],
+    [
+      0,
+      563,
+      0
+    ],
+    [
+      1,
+      0,
+      591
+    ]
+  ],
+  "classes": [
+    "lung_aca",
+    "lung_n",
+    "lung_scc"
+  ],
+  "note": "Group-aware split (near-duplicate copies kept together). Still one public dataset: not clinically validated."
+}

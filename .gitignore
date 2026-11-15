@@ -1,0 +1,11 @@
+.env
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.pth
+*.pt
+!models/tissue_v2/model.pt
+models/ct_detector/*
+!models/ct_detector/README.md
